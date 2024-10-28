@@ -10,8 +10,13 @@ https://www.youtube.com/watch?v=afxl3kOxD9A
 #how to unseal vault
 
 ```
-# get key
+# get key & tocken
 kubectl exec -it vault-0 -n vault  -- vault operator init -n 1 -t 1
 # unseal it
 kubectl exec -it vault-0  -n vault -- vault operator unseal <get_key>
 ```
+
+# local
+token vault hvs.aOC6xS6D8HkGDsm9BUXO2ssj
+
+
