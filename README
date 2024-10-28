@@ -5,6 +5,8 @@ https://www.youtube.com/watch?v=_r368h-mxxs
 #how to unseal vault
 
 ```
+# get key
 kubectl exec -it vault-0 -n vault  -- vault operator init -n 1 -t 1
-kubectl exec -it vault-0  -n vault -- vault operator unseal 9Un2rgeznzB1fe9ELTQJUGdCua+5PaMRmq8LOvOQ0FM=
+# unseal it
+kubectl exec -it vault-0  -n vault -- vault operator unseal <get_key>
 ```
