@@ -7,7 +7,7 @@ spec:
   project: argo-tutde
   source:
     repoURL: 'https://github.com/tutd3/vault.git'
-    path: controler
+    path: chart
     targetRevision: HEAD
     helm:
       releaseName: vault
