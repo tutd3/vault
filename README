@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=_r368h-mxxs
 # ha
 https://www.youtube.com/watch?v=afxl3kOxD9A
 # end source #
+source repo
+https://github.com/hashicorp/vault-helm/blob/v0.28.1/values.yaml
 
 
 
