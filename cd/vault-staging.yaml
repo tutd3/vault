@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vault-staging
+  namespace: argocd
+spec:
+  project: argo-tutde
+  source:
+    repoURL: 'https://github.com/tutd3/vault.git'
+    path: controler
+    targetRevision: HEAD
+    helm:
+      releaseName: vault
+      valueFiles:
+        - values-staging.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: vault
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
